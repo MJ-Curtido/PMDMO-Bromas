@@ -11,7 +11,11 @@ export class JokeListComponent {
   bromas: Joke[];
 
   constructor() {
-    serv:Servicio = new Servicio();
-    this.bromas = null;
+    var serv = new Servicio();
+    this.bromas = serv.getListaBromas();
+  }
+
+  mostrarRespuesta(broma:Joke) {
+    broma.setEscondido();
   }
 }

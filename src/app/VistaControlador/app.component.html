@@ -1,4 +1,5 @@
 <div *ngFor="let broma of bromas">
   <h2>{{broma.getPregunta()}}</h2>
-  <p>{{broma.getRespuesta()}}</p>
+  <button (click)="mostrarRespuesta(broma)">Mostrar</button>
+  <p [hidden]="broma.isEscondido()">{{broma.getRespuesta()}}</p>
 </div>
