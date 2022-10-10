@@ -12,7 +12,7 @@ export class Joke {
     isEscondido() {
         return this.escondido;
     }
-
+    
     getPregunta() {
         return this.pregunta;
     }
