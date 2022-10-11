@@ -1,3 +1,5 @@
 <div>
-    <label><input type="text"></label>
+    <label>Pregunta: <input #pregunta type="text"></label>
+    <label>Respuesta: <input #respuesta type="text"></label>
+    <button (click)="anadirPregunta(pregunta, respuesta)">Añadir Pregunta</button>
 </div>
