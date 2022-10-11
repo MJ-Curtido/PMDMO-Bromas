@@ -24,8 +24,6 @@ export class Servicio {
     }
 
     eliminarBromaServ(broma:Joke) {
-        console.log(broma);
         this.listaBromas = this.listaBromas.filter((bromaServ) => bromaServ.getId() !== broma.getId());
-        console.log(this.listaBromas);
     }
 }
