@@ -12,7 +12,7 @@ export class Servicio {
     }
 
     getListaBromas() {
-        return [...this.listaBromas];
+        return this.listaBromas;
     }
 
     getBroma(ind:number) {
@@ -20,6 +20,12 @@ export class Servicio {
     }
     
     anadirBroma(broma:Joke) {
-        this.listaBromas.push(broma);
+        this.listaBromas.unshift(broma);
+    }
+
+    eliminarBromaServ(broma:Joke) {
+        console.log(broma);
+        this.listaBromas = this.listaBromas.filter((bromaServ) => bromaServ.getId() !== broma.getId());
+        console.log(this.listaBromas);
     }
 }

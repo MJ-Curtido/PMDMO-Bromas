@@ -1,0 +1,6 @@
+<div>
+  <h2>{{ bromaHijo.getPregunta() }}</h2>
+  <p [hidden]="bromaHijo.isEscondido()">{{ bromaHijo.getRespuesta() }}</p>
+  <button (click)="bromaHijo.setEscondido()">Mostrar</button>
+  <button (click)="eliminarBroma(bromaHijo)">Eliminar</button>
+</div>

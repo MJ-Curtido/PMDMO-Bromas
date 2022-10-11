@@ -2,11 +2,15 @@ export class Joke {
     private pregunta: String;
     private respuesta: String;
     private escondido: Boolean;
+    private idJoke: Number;
+    private static idTemp: number = 0;
 
     constructor(pregunta: String, respuesta: String) {
         this.pregunta = pregunta;
         this.respuesta = respuesta;
         this.escondido = true;
+        this.idJoke = Joke.idTemp;
+        Joke.idTemp++;
     }
 
     isEscondido() {
@@ -31,5 +35,9 @@ export class Joke {
 
     setEscondido() {
         this.escondido = !this.escondido;
+    }
+
+    getId() {
+        return this.idJoke;
     }
 }

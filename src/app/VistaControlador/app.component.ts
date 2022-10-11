@@ -8,14 +8,21 @@ import { Servicio } from '../Modelo/servicio';
   styleUrls: ['./app.component.css']
 })
 export class JokeListComponent {
-  bromas: Joke[];
+  serv:Servicio;
 
   constructor() {
-    var serv = new Servicio();
-    this.bromas = serv.getListaBromas();
+    this.serv = new Servicio();
   }
 
-  mostrarRespuesta(broma:Joke) {
-    broma.setEscondido();
+  anadirBromaServ(broma:Joke) {
+    this.serv.anadirBroma(broma);
+  }
+
+  obtenerLista() {
+    return this.serv.getListaBromas();
+  }
+
+  eliminarBroma(broma:Joke) {
+    this.serv.eliminarBromaServ(broma);
   }
 }

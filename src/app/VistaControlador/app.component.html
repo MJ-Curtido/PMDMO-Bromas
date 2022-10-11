@@ -1,7 +1,3 @@
-<app-joke-form></app-joke-form>
+<app-joke-form (enviarBroma)="anadirBromaServ($event)"></app-joke-form>
 <br>
-<div *ngFor="let broma of bromas">
-  <h2>{{broma.getPregunta()}}</h2>
-  <button (click)="mostrarRespuesta(broma)">Mostrar</button>
-  <p [hidden]="broma.isEscondido()">{{broma.getRespuesta()}}</p>
-</div>
+<app-joke *ngFor="let bromaPadre of this.obtenerLista()" [bromaHijo]="bromaPadre" (bromaAEliminar)="eliminarBroma($event)"></app-joke>
