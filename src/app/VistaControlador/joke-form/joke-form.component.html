@@ -1,5 +1,6 @@
-<div>
-    <p>Pregunta: <input #pregunta type="text"></p>
-    <p>Respuesta: <input #respuesta type="text"></p>
-    <button (click)="anadirPregunta(pregunta, respuesta)">Añadir Pregunta</button>
+<div class="container p-5 my-5 bg-dark text-white">
+    <label>Pregunta: <input #pregunta type="text"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label>Respuesta: <input #respuesta type="text"></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-outline-success" (click)="anadirPregunta(pregunta, respuesta)">Añadir Pregunta</button><br>
+    <label id="err" [hidden]="escondido">Rellena todos los campos para añadir una pregunta.</label>
 </div>

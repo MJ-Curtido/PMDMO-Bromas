@@ -1,4 +1,7 @@
-div {
-    text-align: center;
-    font-family: sans-serif;
+label {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#err {
+    color: red;
 }

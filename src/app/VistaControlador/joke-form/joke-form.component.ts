@@ -8,13 +8,19 @@ import { Joke } from 'src/app/Modelo/joke';
 })
 export class JokeFormComponent {
   @Output() enviarBroma = new EventEmitter<Joke>();
+  escondido:Boolean
+
+  constructor() {
+    this.escondido = true;
+  }
 
   anadirPregunta(pregunta:HTMLInputElement, respuesta:HTMLInputElement) {
     if (pregunta.value !== '' && respuesta.value !== '') {
+      this.escondido = true;
       this.enviarBroma.emit(new Joke(pregunta.value, respuesta.value));
     }
     else {
-      //Hacer que se abra un modal
+      this.escondido = false;
     }
     pregunta.value = '';
     respuesta.value = '';
