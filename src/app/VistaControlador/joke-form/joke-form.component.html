@@ -1,4 +1,4 @@
-<div class="container p-5 my-5 bg-dark text-white">
+<div (keypress)="pulsarIntro($event, pregunta, respuesta)" class="container p-5 my-5 bg-dark text-white">
     <label>Pregunta: <input #pregunta type="text"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <label>Respuesta: <input #respuesta type="text"></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button class="btn btn-outline-success" (click)="anadirPregunta(pregunta, respuesta)">Añadir Pregunta</button><br>

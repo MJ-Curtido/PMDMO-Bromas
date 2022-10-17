@@ -14,6 +14,12 @@ export class JokeFormComponent {
     this.escondido = true;
   }
 
+  pulsarIntro(e:KeyboardEvent, pregunta:HTMLInputElement, respuesta:HTMLInputElement) {
+    if (e.key == 'Enter') {
+      this.anadirPregunta(pregunta, respuesta);
+    }
+  }
+
   anadirPregunta(pregunta:HTMLInputElement, respuesta:HTMLInputElement) {
     if (pregunta.value !== '' && respuesta.value !== '') {
       this.escondido = true;
