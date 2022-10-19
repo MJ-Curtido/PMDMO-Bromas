@@ -16,11 +16,11 @@ export class JokeFormComponent {
 
   pulsarIntro(e:KeyboardEvent, pregunta:HTMLInputElement, respuesta:HTMLInputElement) {
     if (e.key == 'Enter') {
-      this.anadirPregunta(pregunta, respuesta);
+      this.crearBroma(pregunta, respuesta);
     }
   }
 
-  anadirPregunta(pregunta:HTMLInputElement, respuesta:HTMLInputElement) {
+  crearBroma(pregunta:HTMLInputElement, respuesta:HTMLInputElement) {
     if (pregunta.value !== '' && respuesta.value !== '') {
       this.escondido = true;
       this.enviarBroma.emit(new Joke(pregunta.value, respuesta.value));
