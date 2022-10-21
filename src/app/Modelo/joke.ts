@@ -1,16 +1,16 @@
+import {v4 as uuidv4} from 'uuid';
+
 export class Joke {
     private pregunta: String;
     private respuesta: String;
     private escondido: Boolean;
-    private idJoke: Number;
-    private static idTemp: number = 0;
+    private idJoke: String;
 
     constructor(pregunta: String, respuesta: String) {
         this.pregunta = pregunta;
         this.respuesta = respuesta;
         this.escondido = true;
-        this.idJoke = Joke.idTemp;
-        Joke.idTemp++;
+        this.idJoke = uuidv4();
     }
 
     isEscondido() {

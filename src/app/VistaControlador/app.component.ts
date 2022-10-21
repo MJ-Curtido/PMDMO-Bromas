@@ -18,10 +18,6 @@ export class JokeListComponent {
     this.serv.anadirBroma(broma);
   }
 
-  obtenerLista() {
-    return this.serv.getListaBromas();
-  }
-
   eliminarBroma(broma:Joke) {
     this.serv.eliminarBromaServ(broma);
   }
